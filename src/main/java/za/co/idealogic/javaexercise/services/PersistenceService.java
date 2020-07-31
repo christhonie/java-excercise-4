@@ -1,12 +1,13 @@
 package za.co.idealogic.javaexercise.services;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,9 +19,6 @@ import za.co.idealogic.javaexercise.repository.MessageRepository;
 @Transactional
 public class PersistenceService {
 	
-	@Autowired
-	private MessageRepository messageRepository;
-
 	@Autowired
 	private MessageRepository messageRepository;
 	
