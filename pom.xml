@@ -34,10 +34,11 @@
 			<artifactId>h2</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
 		</dependency>
-		
+
 		<!-- Command line parsing -->
 		<dependency>
 		    <groupId>commons-cli</groupId>
