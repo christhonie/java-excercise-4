@@ -79,7 +79,7 @@ public class CommandLineProcessingService {
 
         if (cmd.hasOption('d')) {
         	paramProcessed = true;
-        	List<String> messages = persistenceService.getMessages();
+        	List<String> messages = persistenceService.getMessagesTheFancyWay();
         	if(messages != null && messages.size() > 0) {
             	log.info("The current messages in your database are:");
         		for(String message : messages) {
