@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "messages")
@@ -15,8 +17,13 @@ public class Message {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private Instant dateStamp;
-	private String message;
+
+    @NotNull
+    private Instant dateStamp;
+	
+    @NotNull
+    @Size(max = 200) 
+    private String message;
 
 	public Long getId() {
 		return id;
